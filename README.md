@@ -2,7 +2,7 @@ This project aims at estimating a rough pose out of images. For the same, body j
 such that each class represents a quadrant of 36 sized grid over the image. Connecting these joints gives
 a rough estimation of pose.
 	
-### DATA FOLDER
+### Data Folder
 - `images` - Contains resized images (150x150) from LSP dataset
 - labels
 	- Folder LSP contains original images and labels from LSP dataset.
@@ -10,7 +10,7 @@ a rough estimation of pose.
 	- `joints_mod.mat` contains modified labels which are used for training and testing.
 
 
-### `configuration.prototxt`
+#### `configuration.prototxt`
 Contains the entire specification of the convolutional neural network according to the format
 required by the caffe framework.
 It also specifies the path of the training and test source files.
@@ -18,17 +18,17 @@ Network specification contains the convolutional layers and subsampling layers w
 layer contains the filter size and number of filters.
 
 
-### `argument.prototxt`
+#### `argument.prototxt`
 This file contains various important parameters used for training.
 - A path to the configuration file `configuration.prototxt` which specifies CNN architecture.
 - Various other paramaters such as learning rate, momentum, iterations of test batches.
 - Solver mode can be set to CPU or GPU.
 
-### `train_data.txt` & `test_data.txt`
+#### `train_data.txt` & `test_data.txt`
 These files contain the absolute paths to the source images and their corresponding labels.
 There are separate files for training data and test data.
 
-### FINETUNING
+### Fine-Tuning
 Here is the data for Accuracy obtained over different configurations of CNNs.
 For all the configurations, training `batchsize` is 10.
 
