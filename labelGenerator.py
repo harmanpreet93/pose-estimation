@@ -4,7 +4,7 @@ import scipy.io
 import math
 
 # path to the project root
-pathPrefix = '/home/chinmay/Desktop/ML Project/'
+pathPrefix = '/home/harman/Desktop/ML_Project/'
 
 mat = scipy.io.loadmat(pathPrefix + 'data/labels/joints_mod.mat')
 joints = mat['joints_mod']
